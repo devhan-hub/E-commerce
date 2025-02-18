@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='footer'>
      <Container>
       <Row>
-        <Col lg='4'>
+        <Col lg='4' md='6'>
         <div className="logo">
             <div className='logo_description'>
               <h1 className='text-white'>Multimart</h1>
@@ -17,9 +17,9 @@ const Footer = () => {
             </div>
             <p className="footer_text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cum modi molestiae cumque fugit sed omnis placeat optio non exercitationem?</p>
         </Col>
-        <Col lg='3'>
+        <Col lg='3' md='3'>
         <div className="footer_quick-link">
-          <h4 className="quick_link-title">Top Catagory</h4>
+          <h4 className="quick_link-title mb-2">Top Catagory</h4>
           <ListGroup className='mb-3'>
             <ListGroupItem className='ps-0 border-0'>
               <Link to='#'> Mobile Phones
@@ -40,9 +40,9 @@ const Footer = () => {
           </ListGroup>
         </div>
         </Col>
-        <Col lg='2'>
+        <Col lg='2' md='3'>
         <div className="footer_quick-link">
-          <h4 className="quick_link-title">Usefull Links</h4>
+          <h4 className="quick_link-title mb-2">Usefull Links</h4>
           <ListGroup className='mb-3'>
             <ListGroupItem className='ps-0 border-0'>
               <Link to='/shop'> Shop
@@ -63,9 +63,9 @@ const Footer = () => {
           </ListGroup>
         </div>
         </Col>
-        <Col lg='3'>
+        <Col lg='3' md='2'>
         <div className="footer_quick-link ">
-          <h4 className="quick_link-title">Contact</h4>
+          <h4 className="quick_link-title mb-2">Contact</h4>
           <ListGroup className='mb-3 footer-contact'>
             <ListGroupItem className='ps-0 border-0 d-flex align-center gap-2'>
               <span> <i class ="ri-map-pin-line"></i></span>

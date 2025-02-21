@@ -29,7 +29,7 @@ const ProductCard = ({item}) => {
             <img src={item.imgUrl} alt="productImage" />
         </motion.div>
           <div className="p-2 product_info">
-          <h3 className="product_name"><Link to={`/shope/${item.id}`}>{item.productName}</Link></h3>
+          <h3 className="product_name"><Link to={`/product/${item.id}`}>{item.productName}</Link></h3>
           <span className=''>{item.category}</span>
           </div>
         <div className="poduct_card-bottom d-flex align-items justify-between p-2 ">

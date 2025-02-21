@@ -68,7 +68,7 @@ const Shope = () => {
         </Col>
       </Row>
      </Container>
-     <section>
+     <section className='pt-0'>
       <Container>
         <Row>
           {

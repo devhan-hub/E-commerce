@@ -1,0 +1,76 @@
+.product_detail {
+    margin-top: 50px;
+}
+.product_detail h2 {
+    font-size:1.8rem;
+    margin-bottom: 10px;
+}
+.product_rating span i {
+    color:coral;
+}
+.product_rating p span {
+    color: coral;
+    font-weight: 500;
+}
+.product_price {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.product_tab  h6{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.product_tab .active_tab {
+    font-weight: 600;
+}
+.tab_content p {
+    line-height: 30px;
+}
+.review_wrapper ul li span {
+    color:coral;
+    font-weight: 600;
+}
+.review_wrapper ul li p {
+    margin-top: 10px;
+}
+.reviw-form {
+    width: 70%;
+    margin:auto;
+    margin-top: 50px;
+ 
+}
+.reviw-form h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+ 
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group input , .form-group textarea {
+    width: 100%;
+    border-radius: 5px;
+    border:1px solid var(--primary-color);
+    padding: 8px 20px;
+}
+.form-group input:focus , .form-group textarea:focus {
+    outline: none;
+}
+.form-group span {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color:coral;
+    cursor: pointer;
+}
+.related-title 
+{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 30px;
+    text-align: center;
+}

@@ -4,13 +4,14 @@ import CommonSection from '../components/UI/CommonSection'
 import { useParams } from 'react-router-dom'
 import  '../styles/product_detail.css'
 import {motion} from 'framer-motion'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import products from '../assets/data/products'
 import ProductList from '../components/UI/ProductList'
 import { useDispatch } from 'react-redux'
 import { addItem } from '../redux/slices/CartSlice'
 import { useRef } from 'react'
 import { toast } from 'react-toastify'
+
 const ProductDetails = () => {
 
   const {id} = useParams();
@@ -37,8 +38,17 @@ const ProductDetails = () => {
  const handelSubmit = e => {
     e.preventDefault();
    const reviewUserName = reviewName.current.value;
-   const reviewuserMsg = reviewMsg.current.value;
+   const reviewUserMsg = reviewMsg.current.value;
+   const reviewObj = {
+    userName:reviewUserName,
+    text:reviewUserMsg,
+    rating,
+   }
+   toast.success("Review successfully added")
  }
+ useEffect(()=> {
+  window.scrollTo(0,0)
+ } ,[product])
   return (
     <div className='pt-5'>
       <Helmet title={productName }>
@@ -52,7 +62,7 @@ const ProductDetails = () => {
         <Col lg='6'>
         <div className="product_detail">
           <h2>{productName}</h2>
-          <div className='product_rating d-flex align-items-center gap-5 mb-3'>
+          <div className='product_rating rating_group d-flex align-items-center gap-5 mb-3'>
             <div>
              <span><i class='ri-star-s-fill'></i></span>
              <span><i class='ri-star-s-fill'></i></span>
@@ -103,19 +113,19 @@ const ProductDetails = () => {
               <h1>Share Your Experiance</h1>
               <form action="" onSubmit={handelSubmit}>
                 <div className="form-group">
-                  <input ref={reviewName} type="text" placeholder="Enter Name"/>
+                  <input required ref={reviewName} type="text" placeholder="Enter Name"/>
                 </div>
-                <div className="form-group d-flex align-items-center gap-5">
-                  <span onClick={()=> setRating(1)}>1 <i class='ri-star-s-fill'></i></span>
-                  <span onClick={()=> setRating(2)}>2 <i class='ri-star-s-fill'></i></span>
-                  <span onClick={()=> setRating(3)}>3 <i class='ri-star-s-fill'></i></span>
-                  <span onClick={()=> setRating(4)}>4 <i class='ri-star-s-fill'></i></span>
-                  <span onClick={()=> setRating(5)}>5 <i class='ri-star-s-fill'></i></span>
+                <div className="form-group d-flex align-items-center gap-5 rating_group">
+                  <motion.span onClick={()=> setRating(1)} whileTap={{scale:1.2}}>1 <i class='ri-star-s-fill'></i></motion.span>
+                  <motion.span onClick={()=> setRating(2)} whileTap={{scale:1.2}}>2 <i class='ri-star-s-fill'></i></motion.span>
+                  <motion.span onClick={()=> setRating(3)} whileTap={{scale:1.2}}>3 <i class='ri-star-s-fill'></i></motion.span>
+                  <motion.span onClick={()=> setRating(4)} whileTap={{scale:1.2}}>4 <i class='ri-star-s-fill'></i></motion.span>
+                  <motion.span onClick={()=> setRating(5)} whileTap={{scale:1.2}}>5 <i class='ri-star-s-fill'></i></motion.span>
                 </div>
                 <div className="form-group ">
-                  <textarea ref={reviewMsg} row={4} type="text" placeholder="Review Message"/>
+                  <textarea required ref={reviewMsg} row={4} type="text" placeholder="Review Message"/>
                 </div>
-                <button  className="buy_btn" type='submit'>Submit</button>
+                <motion.button whileTap={{scale:1.2}}  className="buy_btn" type='submit'>Submit</motion.button>
               </form>
             </div>
            </div>

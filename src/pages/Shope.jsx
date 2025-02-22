@@ -39,7 +39,7 @@ const Shope = () => {
      <CommonSection title='product'/>
      <Container>
       <Row  className='container'>
-        <Col lg="3" md="3">
+        <Col lg="3" md="6">
         <div className="filter_widget">
                <select name="" id="" onChange={handelFilter}>
                <option >Select by Category</option>
@@ -51,7 +51,7 @@ const Shope = () => {
                </select>
         </div>
         </Col>
-        <Col lg="3" md="3">
+        <Col lg="3" md="6" className=''>
         <div className="filter_widget">
                <select name="" id="">
                <option >Sort by</option>
@@ -60,7 +60,7 @@ const Shope = () => {
                </select>
         </div>
         </Col>
-        <Col lg="6" md="6">
+        <Col lg="6" md="12">
         <div className="search_box">
           <input type="text"  placeholder='search.....' onChange={handelSearch}/>
           <span><i class="ri-search-line"></i></span>

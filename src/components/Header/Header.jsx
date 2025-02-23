@@ -6,6 +6,7 @@ import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
 import { Container, Row } from "reactstrap"
 import { useSelector } from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 const nav_links = [
   {
     path: 'home',
@@ -25,6 +26,7 @@ const Header = () => {
   const headerRef = useRef(null)
   const menuRef = useRef(null)
   const totalQuantity = useSelector(state=>state.cart.totalQuantity)
+  const navigate = useNavigate();
 
   useEffect(()=>{
      const stickyHeaderFunc=()=> {
@@ -74,7 +76,7 @@ const Header = () => {
                 <span className="badge">1</span>
                 <i class="ri-heart-line"></i>
               </span>
-              <span className="cart_icon icon">
+              <span className="cart_icon icon" onClick={()=> navigate('/cart')}>
                 <i class="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
@@ -87,9 +89,6 @@ const Header = () => {
             </span>
             </div>
             </div>
-
-           
-
           </div>
         </Row>
       </Container>

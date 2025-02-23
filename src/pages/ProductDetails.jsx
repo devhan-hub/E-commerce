@@ -29,7 +29,7 @@ const ProductDetails = () => {
          id,
          productName,
          price,
-         image:imgUrl
+         imgUrl
       }))
       toast.success("product successfully added")
 

@@ -1,0 +1,30 @@
+.billing_form .form_group input {
+    border:1px solid var(--card-bg-02);
+    padding:8px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.checkout_card {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.checkout_card h4 , h6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkout_card h6 {
+    margin-bottom: 10px;
+}
+.checkout_card h4 {
+    padding-top: 20px;
+    border-top: 1px solid rgba(221, 221,221, 0.253);
+}
+.my_btn  {
+    background: #fff !important;
+    color: var(--primary-color)!important;
+}
+

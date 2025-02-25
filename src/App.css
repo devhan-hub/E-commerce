@@ -58,17 +58,17 @@ a {
 img{
   width: 100%;
 }
-section{
+/* section{
   padding: 60px 0;
-}
+} */
 .section_title {
   color: var(--primary-color);
   font-weight: 600;
 }
 
 @media only screen and (max-width:768px) {
-section {
+/* section {
   padding: 40px 0;
-}
+} */
 
 }

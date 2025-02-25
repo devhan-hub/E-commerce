@@ -7,6 +7,7 @@ import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import Home from '../pages/Home'
 import { Navigate } from 'react-router-dom'
+import ProtectedRoute from './ProtectedRoute'
 const Routers = () => {
   return (
     <Routes>
@@ -15,7 +16,12 @@ const Routers = () => {
       <Route path='shop' element={<Shope/>}/>
       <Route path='product/:id' element={<ProductDetails/>}/>
       <Route path='cart' element={<Cart/>}/>
-      <Route path='checkout' element={<Checkout/>}/>
+      <Route path='checkout' element={
+        <ProtectedRoute>
+          <Checkout/>
+          </ProtectedRoute>
+      }/>
+      
       <Route path='login' element={<Login/>}/>
       <Route path='signup' element={<Signup/>}/>
 
